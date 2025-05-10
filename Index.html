@@ -165,6 +165,10 @@ body {
     }
   </style>
 </head>
+<form name="contact" netlify hidden>
+  <input type="text" name="name" />
+  <textarea name="message"></textarea>
+</form>
 <body>
   <div id="preloader">
     <div class="spinner"></div>
@@ -232,7 +236,7 @@ body {
 <form name="contact" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
   <input type="text" name="name" placeholder="Your Name" required />
-  <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+  <textarea name="message" placeholder="Your Message" required></textarea>
   <input type="submit" value="Send Message" />
 </form>
   </section>
