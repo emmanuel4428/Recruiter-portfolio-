@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oladele Emmanuel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #e94560;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    nav {
+      background-color: #1a1a2e;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+    .menu-toggle .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 1.5rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #1a1a2e;
+        padding: 1rem;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav ul li {
+        margin: 1rem 0;
+        text-align: center;
+      }
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero {
+      text-align: center;
+      background: linear-gradient(to right, #1a1a2e, #16213e);
+      color: white;
+      padding: 5rem 2rem;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      color: #1a1a2e;
+      border-left: 5px solid #e94560;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 1.5rem;
+    }
+    blockquote {
+      font-style: italic;
+      background-color: #eaf0f6;
+      border-left: 5px solid #e94560;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #e94560;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>  
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul id="nav-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero visible">
+    <h1>Hi, I'm Oladele Emmanuel</h1>
+    <p>Strategic Talent Acquisition Partner with a Passion for Building High-Performing Teams</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>With 7+ years in recruitment, I help companies hire exceptional talent in tech, healthcare, and finance. I’m data-driven, empathetic, and focused on building authentic connections with both clients and candidates.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>
+        <h3>Senior Recruiter - TalentWorks Inc. (2020 - Present)</h3>
+        <p>Placed 150+ candidates in senior tech roles. Led initiatives that reduced time-to-hire by 30%.</p>
+      </li>
+      <li>
+        <h3>Recruitment Consultant - BrightPath Solutions (2017 - 2020)</h3>
+        <p>Built a network of 500+ qualified professionals across finance and healthcare sectors.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li><strong>Full-Cycle Recruiting:</strong> From job intake to onboarding.</li>
+      <li><strong>Interview Coaching:</strong> Guiding candidates through mock sessions and feedback.</li>
+      <li><strong>ATS Optimization:</strong> Resume screening and keyword alignment.</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>“Jane's professionalism and results-driven approach helped us hire our CTO faster than we imagined.”</blockquote>
+    <p>- Alex Smith, CEO, TechBridge</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: oladeleemmanuel648@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/oladele-emmanuel">linkedin.com/in/oladeleemmanuel</a></p>
+<form name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="name" placeholder="Your Name" required />
+  <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+  <input type="submit" value="Send Message" />
+</form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Oladele Emmanuel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.style.display = "none";
+    });
+
+    function toggleMenu() {
+      const navList = document.getElementById("nav-list");
+      navList.classList.toggle("show");
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      if (!section.classList.contains('visible')) {
+        observer.observe(section);
+      }
+    });
+  </script>
+</body>
+</html>
